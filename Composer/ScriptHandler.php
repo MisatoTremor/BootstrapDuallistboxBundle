@@ -29,6 +29,7 @@ class ScriptHandler
             DuallistboxSymlinkCommand::$duallistboxName,
             $options
         );
+        $symlinkTarget .= !empty(DuallistboxSymlinkCommand::$sourceSuffix) ? DIRECTORY_SEPARATOR . DuallistboxSymlinkCommand::$sourceSuffix : '';
 
         $IO->write("Checking Symlink", FALSE);
         if (false === DuallistboxSymlinkCommand::checkSymlink($symlinkTarget, $symlinkName, true)) {
@@ -52,6 +53,7 @@ class ScriptHandler
             DuallistboxSymlinkCommand::$duallistboxName,
             $options
         );
+        $symlinkTarget .= !empty(DuallistboxSymlinkCommand::$sourceSuffix) ? DIRECTORY_SEPARATOR . DuallistboxSymlinkCommand::$sourceSuffix : '';
 
         $IO->write("Checking Mirror", FALSE);
         if (false === DuallistboxSymlinkCommand::checkSymlink($symlinkTarget, $symlinkName)) {
