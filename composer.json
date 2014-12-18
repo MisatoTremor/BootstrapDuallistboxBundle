@@ -19,7 +19,7 @@
     "target-dir": "Misato/BootstrapDuallistboxBundle",
     "require": {
         "mopa/composer-bridge": "~1.3",
-        "istvan-ujjmeszaros/bootstrap-duallistbox": "dev-master"
+        "istvan-ujjmeszaros/bootstrap-duallistbox": "~3.0"
     },
     "suggest":  {
         "twbs/bootstrap": ">2.0,<4.0-dev",
