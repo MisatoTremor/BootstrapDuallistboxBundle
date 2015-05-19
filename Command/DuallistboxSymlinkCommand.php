@@ -151,7 +151,10 @@ EOT
         $this->output = $output;
 
         if ($input->getOption('manual')) {
-            list($symlinkTarget, $symlinkName) = $this->getBootstrapduallistboxPathsFromUser();
+			list($symlinkTarget, $symlinkName) = $this->getBootstrapduallistboxPathsFromUser();
+            if ($symlinkTarget === null) {
+                return;
+            }
         } elseif (false !== $composer = ComposerAdapter::getComposer($input, $output)) {
             $cmanager = new ComposerPathFinder($composer);
             $options = array(
@@ -234,12 +237,12 @@ EOF
 ;
         $this->output->writeln(array(
             '',
-            $this->getHelperSet()->get('formatter')->formatBlock($text, $style = 'bg=blue;fg=white', true),
+            $this->getHelperSet()->get('formatter')->formatBlock($text, 'bg=blue;fg=white', true),
             '',
         ));
 
         if ($this->input->isInteractive() && !$dialog->askConfirmation($this->output, '<question>Should this link be created? (y/n)</question>', false)) {
-            exit;
+            return;
         }
 
         return array($symlinkTarget, $symlinkName);

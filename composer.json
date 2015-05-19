@@ -4,7 +4,6 @@
     "description": "Easy integration of Bootstrap Duallistbox into symfony2",
     "keywords": ["form", "bootstrap", "bootstrap form", "template", "duallist"],
     "license": "Apache-2.0",
-    "version": "1.0.1",
     "authors": [
         {
             "name": "Steffen Roßkamp",

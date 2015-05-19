@@ -8,31 +8,6 @@
 /vendor
 composer.phar
 
-# IDE files   #
-###############
-/.buildpath
-/.settings
-/.project
-/.metadata
-
-/nbproject
-
-*.sublime*
-
-*~
-
-/.idea
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
 # Keep .gitkeep #
 #################
 !.gitkeep
